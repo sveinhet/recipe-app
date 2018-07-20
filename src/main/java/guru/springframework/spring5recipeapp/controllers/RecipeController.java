@@ -1,32 +1,32 @@
 package guru.springframework.spring5recipeapp.controllers;
 
+
 import guru.springframework.spring5recipeapp.demain.Recipe;
 import guru.springframework.spring5recipeapp.services.RecipeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Slf4j
 @Controller
-public class IndexController {
+public class RecipeController {
 
     private final RecipeService recipeService;
 
     @Autowired
-    public IndexController(RecipeService recipeService) {
+    public RecipeController(RecipeService recipeService) {
         this.recipeService = recipeService;
     }
 
-    @RequestMapping({"", "/", "/index"})
-    public String getIndexPage(Model model) {
+    @RequestMapping("/recipe/show/{id}")
+    public String getRecipe(Model model, @PathVariable("id") String id) {
 
-        log.debug("In the controller");
-        model.addAttribute("recipes", recipeService.getRecipes());
+        Recipe recipe = recipeService.findById(Long.decode(id));
+        model.addAttribute("recipe", recipe);
 
-        return "index";
+        return "recipe/show";
     }
 }
-
