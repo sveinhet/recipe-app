@@ -1,6 +1,5 @@
 package guru.springframework.spring5recipeapp.commands;
 
-import guru.springframework.spring5recipeapp.demain.UnitOfMeasure;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +11,8 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class IngredientCommand {
     private Long id;
+    private Long recipeId;
     private String description;
     private BigDecimal amount;
-    private UnitOfMeasure uom;
+    private UnitOfMeasureCommand uom;
 }

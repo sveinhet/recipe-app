@@ -4,8 +4,8 @@ import guru.springframework.spring5recipeapp.commands.CategoryCommand;
 import guru.springframework.spring5recipeapp.commands.IngredientCommand;
 import guru.springframework.spring5recipeapp.commands.NotesCommand;
 import guru.springframework.spring5recipeapp.commands.RecipeCommand;
-import guru.springframework.spring5recipeapp.demain.Difficulty;
-import guru.springframework.spring5recipeapp.demain.Recipe;
+import guru.springframework.spring5recipeapp.domain.Difficulty;
+import guru.springframework.spring5recipeapp.domain.Recipe;
 import org.junit.Before;
 import org.junit.Test;
 

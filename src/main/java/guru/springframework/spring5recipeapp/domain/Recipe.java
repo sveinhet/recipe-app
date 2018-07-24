@@ -1,12 +1,14 @@
-package guru.springframework.spring5recipeapp.demain;
+package guru.springframework.spring5recipeapp.domain;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+@Setter
+@Getter
 @Entity
 public class Recipe {
 
@@ -41,6 +43,8 @@ public class Recipe {
         joinColumns = @JoinColumn(name= "recipe_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new HashSet<>();
 
+    public Recipe() {
+    }
 
     public void setNotes(Notes notes) {
         if (notes != null) {

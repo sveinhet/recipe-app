@@ -1,7 +1,7 @@
 package guru.springframework.spring5recipeapp.converters;
 
 import guru.springframework.spring5recipeapp.commands.UnitOfMeasureCommand;
-import guru.springframework.spring5recipeapp.demain.UnitOfMeasure;
+import guru.springframework.spring5recipeapp.domain.UnitOfMeasure;
 import org.junit.Before;
 import org.junit.Test;
 

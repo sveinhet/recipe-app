@@ -1,6 +1,6 @@
 package guru.springframework.spring5recipeapp.commands;
 
-import guru.springframework.spring5recipeapp.demain.Difficulty;
+import guru.springframework.spring5recipeapp.domain.Difficulty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -21,6 +21,7 @@ public class RecipeCommand {
     private String url;
     private String directions;
     private Set<IngredientCommand> ingredients = new HashSet<>();
+    private Byte[] image;
     private Difficulty difficulty;
     private NotesCommand notes;
     private Set<CategoryCommand> categories = new HashSet<>();

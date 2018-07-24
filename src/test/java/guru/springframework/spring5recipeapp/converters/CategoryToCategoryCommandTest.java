@@ -1,10 +1,9 @@
 package guru.springframework.spring5recipeapp.converters;
 
 import guru.springframework.spring5recipeapp.commands.CategoryCommand;
-import guru.springframework.spring5recipeapp.demain.Category;
+import guru.springframework.spring5recipeapp.domain.Category;
 import org.junit.Before;
 import org.junit.Test;
-import org.yaml.snakeyaml.events.Event;
 
 import static org.junit.Assert.*;
 
